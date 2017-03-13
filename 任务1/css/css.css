@@ -1,0 +1,97 @@
+/*初始化*/
+body,div,img,ul,li,/*h1,h2,h5,*/p,table{margin: 0;padding: 0;font-family:arial;}
+img { border:none; }
+a{text-decoration: none;}
+p{font-size: 18px;line-height: 25px;text-indent: 2em;}
+.clear { zoom:1; }
+.clear:after { content:''; display:block; clear:both; }
+/*top*/
+.top{
+	width: 100%;
+	padding: 4px 0px 0px 0px;
+	background: #b0afaf;
+}
+.nav{
+	float: right;
+	line-height: 46px;
+	list-style: none;
+}
+.nav>li{
+	float: left;
+	width: 100px;
+}
+/*left*/
+.content{width: 100%;background: #dedede;}
+.left{
+	width:65%;
+	float: left;
+	background: #fff;
+	margin: 24px 20px 24px 24px;
+}
+.tab{
+	padding: 0 20px;
+}
+.right{
+	width: 30%;
+	background:#fff;
+	float: right;
+	margin: 24px 20px 0 0;
+}
+.bu_img{
+	float: left;
+	width: 18%;
+	border: 1px solid #666;
+	margin: 0 10px 10px 0;
+}
+.bu_img>img{
+	float: left;
+	padding: 10px;
+	width: 90%;
+}
+.tab ul{
+	padding-left: 20px;
+}
+.tab table{
+	width: 100%;
+}
+.tab table th,td {
+	text-align: left;
+}
+th{background: #333333;color: #fff}
+/*right*/
+.right>p{
+	margin: 30px;
+	border-left: 2px solid #666;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.right table{
+	margin: 0 30px;
+}
+.right table tr td:nth-child(1){
+	width: 50%;
+	font-size: 15px;
+	text-align: right;
+	vertical-align: top;
+}
+.point1{font-size: 10px;color: #666;padding-bottom: 30px;}
+.point2{resize:none;}
+.point3{position: relative; top: 0;}
+.bottom{
+	margin: 10px 30px 10px 30px;
+	background: #3355d0;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 10px;
+}
+/*foot*/
+.foot{
+	background: #000000;
+	line-height: 50px;
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
+}
