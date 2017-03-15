@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>clear</title>
+	<style>
+	body{margin: 0;}
+	.box{
+		width: 400px;
+		height: 200px;
+		background: #666;
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -100px;
+		margin-left: -200px;
+	}
+	.top,.bottom{
+		width: 100px;
+		height: 100px;
+		background: yellow;
+		border-radius: 50px;
+		position: relative;
+	}
+	.top{
+		top: -50px;
+		left: -50px;
+	}
+	.bottom{
+		bottom: -50px;
+		left: 350px;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="top"></div>
+		<div class="bottom"></div>
+	</div>
+</body>
+</html>
