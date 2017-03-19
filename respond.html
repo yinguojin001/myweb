@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>respond</title>
+	<style >
+		body,div{margin: 0;padding: 0;}
+		.row {
+			padding-right: 20px;
+		}
+		[class*='col-'] {
+			float: left;
+			height: 50px;
+			width:16.666%;
+			outline: 1px solid #999;
+			background: #eee;
+			margin: 20px 0 0 20px;
+		}
+		@media (min-width:769px) {
+			.col-md-4 {
+				width: -moz-calc(33.333% - 20px);
+				width: -webket-calc(33.333% - 20px);
+				width: calc(33.333% - 20px);
+			}
+			.col-md-3 {
+				width: -moz-calc(25% - 20px);
+				width: -webket-calc(25% - 20px);
+				width: calc(25% - 20px);
+			}
+			.col-md-6 {
+				width: -moz-calc(50% - 20px);
+				width: -webket-calc(50% - 20px);
+				width: calc(50% - 20px);
+			}
+			.col-md-1 {
+				width: -moz-calc(8.333% - 20px);
+				width: -webket-calc(8.333% - 20px);
+				width: calc(8.333% - 20px);
+			}
+			.col-md-2 {
+				width: -moz-calc(16.666% - 20px);
+				width: -webket-calc(16.666% - 20px);
+				width: calc(16.666% - 20px);
+			}
+		}
+		@media (max-width:768px) {
+			.col-sm-6 {
+				width: -moz-calc(50% - 20px);
+				width: -webket-calc(50% - 20px);
+				width: calc(50% - 20px);
+			}
+			.col-sm-12 {
+				width: -moz-calc(100% - 20px);
+				width: -webket-calc(100% - 20px);
+				width: calc(100% - 20px);
+			}
+			.col-sm-3 {
+				width: -moz-calc(25% - 20px);
+				width: -webket-calc(25% - 20px);
+				width: calc(25% - 20px);
+			}
+			.col-sm-2 {
+				width: -moz-calc(16.666% - 20px);
+				width: -webket-calc(16.666% - 20px);
+				width: calc(16.666% - 20px);
+			}
+			.col-sm-8 {
+				width: -moz-calc(66.666% - 20px);
+				width: -webket-calc(66.666% - 20px);
+				width: calc(66.666% - 20px);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-4 col-sm-6"></div>
+		<div class="col-md-4 col-sm-6"></div>
+		<div class="col-md-4 col-sm-12"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-sm-3"></div>
+		<div class="col-md-6 col-sm-6"></div>
+		<div class="col-md-3 col-sm-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-sm-2"></div>
+		<div class="col-md-1 col-sm-2"></div>
+		<div class="col-md-2 col-sm-8"></div>
+		<div class="col-md-2 col-sm-6"></div>
+		<div class="col-md-6 col-sm-6"></div>
+	</div>
+</body>
+</html>
