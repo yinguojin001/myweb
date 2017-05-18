@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	img{
+		width: 500px;
+		height: 250px;
+	}
+	.box{
+		width: 500px;
+		height: 250px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		border:1px solid #666;
+	}
+	.left{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: -54px;
+		top: 50%;
+		margin-top: -25px;
+		border-radius: 50% 0 0 50%;
+		background: #666;
+		z-index: 2;
+	}
+	.right{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: -54px;
+		top: 50%;
+		margin-top: -25px;
+		border-radius: 0 50% 50% 0;
+		background: #666;
+		z-index: 2;
+	}
+	.bottom{
+		width: 216px;
+		height: 20px;
+		position: absolute;
+		left: 50%;
+		bottom: 5px;
+		margin-left: -150px;
+		padding: 0 42px 0 42px;
+		/*background: #666;*/
+		border:1px solid #666;
+		border-radius: 10px;
+		list-style: none;
+		text-align: center;
+	}
+	.bottom li{
+		float: left;
+		width: 14px;
+		height: 16px;
+		margin: 2px 10px 0 10px;
+		/*background: #666;*/
+		border:1px solid #666;
+		border-radius: 8px;
+	}
+	.active{
+		background: #666;
+	}
+	</style>
+	<script>
+	window.onload=function(){
+		var obox=document.getElementById('box');
+		var oleft=obox.getElementsByTagName('div')[0];
+		var oimg=obox.getElementsByTagName('div')[1];
+		var oright=obox.getElementsByTagName('div')[2];
+		var oimage=oimg.getElementsByTagName('img')[0];
+		var arr1=['image/wallpaper/0001.jpg','image/wallpaper/0002.jpg','image/wallpaper/0003.jpg','image/wallpaper/0004.jpg','image/wallpaper/0005.jpg','image/wallpaper/0006.jpg'];
+		oimg.index=0;
+
+		oleft.onclick=function(){
+			if(oimg.index==0){                                         //判断如果向左到了尽头，就将索引置为最右边
+				oimg.index=arr1.length-1;         
+			}else{
+				oimg.index--;
+			};
+			oimage.src=arr1[oimg.index];
+			for(var i=0;i<arr1.length;i++){                     //每次点击底部的其中一个l<li>,都要初始化底部导航
+				ali[i].className='';
+			}
+			ali[oimg.index].className='active';
+		};
+		oright.onclick=function(){
+			if(oimg.index==(arr1.length-1)){               //判断如果向右到了尽头，就将索引置为最左边
+				oimg.index=0;
+			}else{
+				oimg.index++;
+			};
+			oimage.src=arr1[oimg.index];
+			for(var i=0;i<arr1.length;i++){                    //每次点击底部的其中一个l<li>,都要初始化底部导航
+				ali[i].className='';
+			}
+			ali[oimg.index].className='active';
+		};
+
+		var obottom=obox.getElementsByTagName('ul')[0];
+		var ali=obottom.getElementsByTagName('li');
+		ali[oimg.index].className='active';
+		
+		for(var i=0;i<arr1.length;i++){
+			ali[i].index=i;
+			ali[i].onclick=function(){
+				oimage.src=arr1[this.index];
+				for(var i=0;i<arr1.length;i++){
+					ali[i].className='';
+				}
+				this.className='active';
+				oimg.index=this.index;                      //将<li>的索引和img的索引联动起来
+			}
+		}
+	};
+	</script>
+</head>
+<body>
+	<div id="box" class="box">
+		<div class="left"></div>
+		<div class="image"><img src="image/wallpaper/0001.jpg" alt=""></div>
+		<div class="right"></div>
+		<ul class="bottom"><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+	</div>
+</body>
+</html>
