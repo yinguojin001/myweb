@@ -27,7 +27,7 @@ window.onload=function(){
 				myinter=setInterval(function(){
 					oimg.index==arr1.length-1?oimg.index=0:oimg.index++;
 					change(arr1,oimg.index);
-				},2000);
+				},3000);
 			}
 			oleft.onclick=function(){
 				clearInterval(myinter);
@@ -36,7 +36,7 @@ window.onload=function(){
 				myinter=setInterval(function(){
 					oimg.index==arr1.length-1?oimg.index=0:oimg.index++;
 					change(arr1,oimg.index);
-				},2000);
+				},3000);
 			}
 			oright.onclick=function(){
 				clearInterval(myinter);
@@ -45,13 +45,13 @@ window.onload=function(){
 				myinter=setInterval(function(){
 					oimg.index==arr1.length-1?oimg.index=0:oimg.index++;
 					change(arr1,oimg.index);
-				},2000);
+				},3000);
 			}
 		}
 		var myinter=setInterval(function(){
 			oimg.index==arr1.length-1?oimg.index=0:oimg.index++;
 			change(arr1,oimg.index);
-		},2000);
+		},3000);
 
 
 		/****************导航按钮*****************/
